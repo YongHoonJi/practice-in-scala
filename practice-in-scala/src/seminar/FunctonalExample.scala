@@ -76,13 +76,11 @@ class FunctonalExample {
   
   /////////////////////////////// common blocks(reduce&fold) /////////////////////////////// 
   val numbers = List(1, 10, 100, 1000)
-  def add(a: Int, b: Int) = {
-    println(a + "+" + b + " = " + (a + b))
-  }
-/*  // reduce
+  def add = (a: Int, b: Int) =>  ( a + b )
+  // reduce
   println("reduce : " + numbers.reduceLeft(add))
   
   // fold
   println("fold : " + numbers.foldLeft(1)(add))  // with start value 1
-*/  
+  
 }
