@@ -33,5 +33,4 @@ package fp.think
     (myMaginitude - thatMagnitude).round.toInt
   }
 
-  
 }
