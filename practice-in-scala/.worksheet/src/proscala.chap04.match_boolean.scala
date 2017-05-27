@@ -1,6 +1,6 @@
 package proscala.chap04
-
-object match_boolean {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(77); 
+//패턴 매칭은 데이터 구조로 부터 데이터를 뽑아내는 유연하고 간결한 기법이다.
+object match_boolean {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(121); 
 	val bools = Seq(true, false);System.out.println("""bools  : Seq[Boolean] = """ + $show(bools ));$skip(112); 
 	
 	for(b <- bools) {

@@ -40,6 +40,7 @@ object TryCatchARM extends App{
     	if(size > 20) throw new RuntimeException("Big file!")
     }
   }
-  
   	countLines("/Users/Justin/git/practice-in-scala/practice-in-scala/src/proscala/chap03/basic_for.sc");
+  	
+  	
 }

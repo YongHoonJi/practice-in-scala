@@ -1,5 +1,5 @@
 package proscala.chap04
-
+//패턴 매칭은 데이터 구조로 부터 데이터를 뽑아내는 유연하고 간결한 기법이다.
 object match_boolean {
 	val bools = Seq(true, false)              //> bools  : Seq[Boolean] = List(true, false)
 	
