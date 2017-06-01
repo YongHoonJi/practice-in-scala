@@ -6,9 +6,8 @@ package proscala.chap05
 // 1.준비코드를 생략. 2. 매개변수화된 타입을 받는 메서드를 사용해서 버그를 줄임
 // 용도 : 실행 맥락을 넘길 경우 사용하고 실행 원자성을 보장하는 곳에 사용. 트렌잭션, 데이터베이스 연결, 스레드 풀, 사용자 세션 등
  
-object implicit_args {
+object implicit_args {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(387); 
 	def calcTax(amount: Float)(implicit rate: Float): Float = amount * rate
-                                                  //> calcTax: (amount: Float)(implicit rate: Float)Float
 	
 	object SimpleStateSalesTax {
 		// 기본 세율에 대한 암시적인 값
@@ -27,14 +26,14 @@ object implicit_args {
 		implicit def rate(implicit cstd: ComplicatedSalesTaxData): Float =
 			if(cstd.isTaxHoliday) 0.0F
 			else cstd.baseRate + extraTaxRateForStore(cstd.storeId)
-	}
+	};System.out.println("""calcTax: (amount: Float)(implicit rate: Float)Float""");$skip(663); 
 	
 	{
 		// implicit rate를 SimpleStateSalesTax.rate 변수를 사용
 		import SimpleStateSalesTax.rate
 		val amount = 100F
 		println(s"Tax on $amount = ${calcTax(amount)}")
-	}                                         //> Tax on 100.0 = 5.0
+	};$skip(236); 
 	
 	{
 		// implicit rate를 ComplicatedSalesTax.rate 함수를 사용
@@ -43,5 +42,5 @@ object implicit_args {
 		
 		val amount = 100F
 		println(s"Tax on $amount = ${calcTax(amount)}")
-	}                                         //> Tax on 100.0 = 11.0
+	}}
 }

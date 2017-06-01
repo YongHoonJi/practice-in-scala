@@ -14,7 +14,7 @@ object manage {
                   (f: R => T) = {           // R을 받아서 T타입을 출력하는 함수 
     var res: Option[R] = None
     try {
-      res = Some(resource) // resource 함수가 참조(수행)되는 시점. lazyness  
+      res = Some(resource) // resource 함수가 참조(수행)되는 시점. laziness  
       f(res.get)
     } catch {
       case NonFatal(ex) => println(s"Non fatal exception! $ex")
