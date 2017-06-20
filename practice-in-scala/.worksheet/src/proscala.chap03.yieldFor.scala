@@ -1,12 +1,12 @@
 package proscala.chap03
 
 object yieldFor {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(81); 
-	val alpha = List("abc", "bcd", "efg");System.out.println("""alpha  : List[String] = """ + $show(alpha ));$skip(98); 
+	val alpha = List("abc", "bcd", "efg");System.out.println("""alpha  : List[String] = """ + $show(alpha ));$skip(94); 
 	// for의 결과를 모아서 담아두는 yield
 	val filtered = for{
 		a <- alpha
 		if a.contains("a")
-	} yield alpha;System.out.println("""filtered  : List[List[String]] = """ + $show(filtered ));$skip(34); 
+	} yield a;System.out.println("""filtered  : List[String] = """ + $show(filtered ));$skip(34); 
 
 	for( e <- filtered ) println(e);$skip(69); 
 	

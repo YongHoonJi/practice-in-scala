@@ -6,9 +6,9 @@ object yieldFor {
 	val filtered = for{
 		a <- alpha
 		if a.contains("a")
-	} yield alpha                             //> filtered  : List[List[String]] = List(List(abc, bcd, efg))
+	} yield a                                 //> filtered  : List[String] = List(abc)
 
-	for( e <- filtered ) println(e)           //> List(abc, bcd, efg)
+	for( e <- filtered ) println(e)           //> abc
 	
 	for{
 		a <- alpha
